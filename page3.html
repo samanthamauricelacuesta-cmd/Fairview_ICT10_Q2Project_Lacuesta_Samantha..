@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Club Members Registration</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* SITE NAVBAR */
+        .site-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fcfcfc;
+            padding: 18px 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333333;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .nav-brand {
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #39876f;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-item-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-item-links a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            box-shadow: none !important;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .nav-item-links a:hover {
+            color: #39876f;
+            transform: none !important;
+        }
+
+        /* PAGE DESIGN */
+        body {
+            background-image: url(https://i.pinimg.com/736x/05/6c/48/056c48477ab9a81f2143306bcd5cae44.jpg);
+            background-size: cover;
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0 0 30px 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fbfae3;
+            width: 380px;
+            margin: auto;
+            padding: 30px;
+            border: 2px solid #fcebb4;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #4e4701;
+            text-align: center;
+            font-family: cursive;
+            font-size: 24px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #474102;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            background: #fffffa;
+            border: 1px solid #46340a;
+            font-family: Georgia, serif;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 22px;
+            background-color: #474102;
+            color: white;
+            border: 1px solid #5b4409;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3c3101;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 12px;
+            background: #fff8fc;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 22px;
+            color: #3f2a01;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        @media (max-width: 650px) {
+            .site-navbar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav-item-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="site-navbar">
+        <a href="../index.html" class="nav-brand">PORTFOLIO</a>
+
+        <div class="nav-item-links">
+            <a href="../index.html">1. Club Checker</a>
+            <a href="../skills_test/page2.html">2. Nonmetal Lab</a>
+            <a href="page3.html">3. Club Members</a>
+            <a href="../creator/page4.html">4. Creator</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>School Club Members</h1>
+        <p>Add your name to register for Club membership.</p>
+
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" placeholder="Enter first name">
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" placeholder="Enter last name">
+
+        <button py-click="verify_candidate">Register Candidate</button>
+
+        <div id="result">
+            Your name will appear here:<br>
+        </div>
+
+        <footer>Communication Arts Club Membership</footer>
+    </div>
+
+    <script type="py" src="main3.py"></script>
+</body>
+</html>
